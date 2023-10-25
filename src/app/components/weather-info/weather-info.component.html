@@ -1,0 +1,32 @@
+<section class="header-section">
+    <div class="container">
+      <h1 class="title">Get weather by your city of choice</h1>
+      <form (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="City of Choice" [(ngModel)]="inputVal" autofocus name="cityName" />
+
+        <button type="submit">GO</button>
+       
+      </form>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="container">
+      <ul class="location-list">
+        <li *ngFor="let city of cities" class="location">
+          {{ city.name }}, {{ city.country }} - {{ city.temp }}°C, {{ city.description }}
+        </li>
+      </ul>
+    
+    
+      <span class="error-message">{{ msg }}</span>
+    
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <small>
+        Crafted with <span>❤</span> by
+        <a href="http://5DaysCode.com/" target="_blank">5DaysCode</a>
+      </small>
+    </div>
+  </footer>

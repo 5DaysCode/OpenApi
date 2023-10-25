@@ -12,12 +12,12 @@
 
   .logo {
     font-size: 20px;
-    font-weight: 900; /* Increased font-weight for boldness */
-    text-align: left; /* Updated to left alignment */
+    font-weight: 900;
+    text-align: left;
 
     .author {
       font-size: 12px;
-      font-weight: normal; /* Regular weight for the author text */
+      font-weight: normal;
     }
   }
 
@@ -26,7 +26,7 @@
 
     .fa-minus,
     .fa-plus {
-      margin: 0 10px; /* Added this line for spacing around both icons */
+      margin: 0 10px;
     }
   }
 

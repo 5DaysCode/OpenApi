@@ -1,0 +1,113 @@
+@import "src/styles/_variables.scss";
+
+/* HEADER SECTION */
+.header-section {
+  color: $text-light;
+  margin-top: 40px;
+
+  .title {
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      font-size: 1.5rem;
+      padding: 10px;
+      width: 100%;
+      max-width: 500px;
+      border: 1px solid $text-medium;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 18px 245px;
+      color: $button-color;
+      border-radius: 5px;
+      background: $button-accent-red;
+      transition: background 0.3s ease-in-out;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background: $button-accent-darkred;
+      }
+    }
+  }
+}
+
+/* CONTENT SECTION */
+.content-section {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .location-list {
+    display: grid;
+
+    grid-gap: 20px;
+
+    .location {
+      padding: 30px;
+      border-radius: 10px;
+      background: $text-light;
+      color: $text-dark;
+      list-style: none;
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  color: $text-light;
+  margin-top: 40px;
+
+  span {
+    color: $footer-heart-color;
+  }
+}
+
+.error-message {
+  color: $error-mesage-color;
+  position: absolute;
+  max-width: 450px;
+  min-height: 40px;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1000px) {
+  .content-section {
+    .location-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .content-section {
+    .location-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content-section {
+    .location-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+/* Home section -end */
