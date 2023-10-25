@@ -1,0 +1,18 @@
+@import "src/styles/_variables.scss";
+
+.info-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: #fff4cc;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
