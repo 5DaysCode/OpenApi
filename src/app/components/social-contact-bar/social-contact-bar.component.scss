@@ -1,0 +1,59 @@
+@import "src/styles/_variables.scss";
+
+.social-contact-bar {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $socialbar-bg-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  height: 60px;
+  align-items: center;
+
+  .social-icons {
+    display: flex;
+    color: $text-light;
+
+    i,
+    .contact-icons i {
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .contact-icons {
+    display: flex;
+    color: $icons-color;
+
+    i:first-child + span {
+      margin-right: 20px;
+    }
+
+    i + span {
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .social-contact-bar {
+      flex-direction: column;
+      align-items: center;
+
+      .social-icons,
+      .contact-icons {
+        margin: 10px 0; /* Add margin to space out the two sections */
+      }
+
+      .social-icons i,
+      .contact-icons i {
+        font-size: 20px; /* Decrease the icon size for better mobile experience */
+      }
+    }
+  }
+}
