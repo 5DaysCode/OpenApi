@@ -1,0 +1,49 @@
+@import "src/styles/_variables.scss";
+
+.top-bar {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $topbar-bg-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .logo {
+    font-size: 20px;
+    font-weight: 900; /* Increased font-weight for boldness */
+    text-align: left; /* Updated to left alignment */
+
+    .author {
+      font-size: 12px;
+      font-weight: normal; /* Regular weight for the author text */
+    }
+  }
+
+  .icons {
+    display: flex;
+
+    .fa-minus,
+    .fa-plus {
+      margin: 0 10px; /* Added this line for spacing around both icons */
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    .icons {
+      .fa-minus,
+      .fa-plus {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
